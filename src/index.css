@@ -1,13 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=M+PLUS+Rounded+1c:wght@900&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-image: url("./emoji-bg.jpg");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  max-height: 100vh;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.container {
+  width: 70%;
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.search-result {
+  background-color: rgb(51, 11, 51);
+  height: 85vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom: solid 5px rgb(194, 42, 194);
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(199, 151, 199);
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Heebo", sans-serif;
+  font-size: 4vw;
+  color: rgb(44, 11, 44);
+  text-align: center;
+  caret-color: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+.input-div {
+  width: 100%;
+  height: 15vh;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.emoji div {
+  font-size: 50vh;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-align: center;
+  border-bottom: solid 7px rgb(194, 42, 194);
+  border-radius: 15px;
+}
+
+.emoji div:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+}
+
+.emoji-comp {
+  width: 100%;
+  height: 100%;
+}
+
+.emoji {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgb(199, 151, 199);
+}
+
+.emoji div .tooltiptext {
+  color: white;
+  font-size: 10px;
+  font-family: "Heebo", sans-serif;
+}
+
+/* .tooltip {
+  position: relative;
+  display: flex;
+  z-index: 100;
+} 
+*/
+
+/* .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 100;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+} */
+
+/* .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 100;
+
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+} */
+
+/* .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(67, 2, 80);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(19, 1, 20);
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
+  /* input {
+    font-size: 3.5vw;
+  } */
+}
+
+@media (max-height: 400px) {
+  input {
+    font-size: 5vh;
+  }
 }
